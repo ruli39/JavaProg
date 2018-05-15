@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hash_gen.FXMLDocumentController">
+   <children>
+      <Label layoutX="229.0" layoutY="4.0" text="HASH GENERATOR">
+         <font>
+            <Font name="Courier New" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="74.0" text="String :" />
+      <TextField fx:id="str_in" layoutX="66.0" layoutY="70.0" prefHeight="25.0" prefWidth="435.0" />
+      <Button layoutX="517.0" layoutY="70.0" mnemonicParsing="true" onAction="#gen_btn" text="Generate!" />
+      <TableView fx:id="table_hash" editable="true" layoutX="14.0" layoutY="132.0" prefHeight="200.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="string_col" prefWidth="144.0" text="String" />
+          <TableColumn fx:id="MD5_col" minWidth="0.0" prefWidth="142.0" text="MD5" />
+          <TableColumn fx:id="SHA1_col" prefWidth="140.0" text="SHA1" />
+          <TableColumn fx:id="Base64_col" prefWidth="143.0" text="Base64" />
+        </columns>
+      </TableView>
+      <Button layoutX="493.0" layoutY="342.0" mnemonicParsing="true" onAction="#del_btn" text="Delete History" />
+   </children>
+</Pane>
